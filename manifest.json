@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "LOCKIN",
+  "version": "1.2",
+  "description": "Pixel-style YouTube focus lock for JEE, NEET, and study mode.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src https://api.groq.com https://api.openai.com https://generativelanguage.googleapis.com"
+  },
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "https://api.groq.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}

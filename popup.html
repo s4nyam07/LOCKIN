@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCKIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <main class="app-shell">
+        <section class="hero pixel-box">
+            <div class="logo-tile" aria-label="LOCKIN icon">
+                <span>LK</span>
+                <img id="appIcon" src="assets/icon.png" alt="LOCKIN">
+            </div>
+
+            <div class="title-wrap">
+                <p class="mini-copy">study mode</p>
+                <h1>LOCKIN</h1>
+                <p class="tagline">block trash tabs before they win</p>
+            </div>
+
+            <button class="gear-btn" id="settingsBtn" type="button" aria-label="Open settings">SET</button>
+        </section>
+
+        <section class="settings-panel pixel-box hidden" id="settingsPanel">
+            <div class="section-row">
+                <span class="section-title">ai settings</span>
+                <span class="saved-pill" id="settingsMsg">not saved</span>
+            </div>
+
+            <label for="providerSelect">provider</label>
+            <select id="providerSelect">
+                <option value="groq">Groq</option>
+                <option value="openai">OpenAI</option>
+                <option value="gemini">Gemini</option>
+            </select>
+
+            <label for="apiKeyInput">api key</label>
+            <input id="apiKeyInput" type="password" autocomplete="off" placeholder="paste key here">
+
+            <button class="save-btn" id="saveSettings" type="button">SAVE KEY</button>
+        </section>
+
+        <section class="focus-card pixel-box">
+            <div class="section-row">
+                <span class="section-title">focus</span>
+                <span class="saved-pill" id="providerText">AI: --</span>
+            </div>
+
+            <div class="focus-buttons" role="group" aria-label="Current focus">
+                <button class="focus-btn" id="jee" data-exam="jee" type="button">JEE</button>
+                <button class="focus-btn" id="neet" data-exam="neet" type="button">NEET</button>
+                <button class="focus-btn" id="others" data-exam="others" type="button">OTHER</button>
+            </div>
+
+            <p class="status-line" id="focusText">loading save data...</p>
+        </section>
+
+        <section class="stats-card pixel-box">
+            <div class="section-row">
+                <span class="section-title">weekly hits</span>
+                <span class="saved-pill">tabs blocked</span>
+            </div>
+            <canvas id="myChart" width="360" height="150"></canvas>
+        </section>
+
+        <footer>
+            made by <span>Sanyam</span>
+        </footer>
+    </main>
+
+    <script src="/libs/chart.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
