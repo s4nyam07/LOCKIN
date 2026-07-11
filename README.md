@@ -34,8 +34,8 @@ LOCKIN uses AI to:
 
 ## 📷 Screenshots
 
-*![image](https://github.com/user-attachments/assets/b10218b7-f277-4112-a72e-24179fed6888)
-*
+![image](https://github.com/user-attachments/assets/b10218b7-f277-4112-a72e-24179fed6888)
+
 
 ## 🛠️ Tech Stack
 
